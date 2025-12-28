@@ -1,3 +1,6 @@
+# Build/Cmake Assets
+build/* 
+
 # Prerequisites
 *.d
 
