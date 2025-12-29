@@ -1,12 +1,19 @@
-#include <iostream>
-#include <vector>
+#include "Window.h"
 
-struct Point {float x, y, z;};
+int main() {
+    Window appWindow(1280, 720, "Stratum Debug");
 
-int main(){
-    Point p = {0.1, 0.2, 0.3};
-    auto [x,y,z] = p;
+    //Initialize
+    if (!appWindow.init()) {
+        return -1;
+    }
 
-    std::cout << "C++ Version: " << __cplusplus << std::endl;
+    //The Render Loop
+    while (appWindow.isOpen()) {
+        appWindow.clear();
+        
+        appWindow.update();
+    }
+
     return 0;
 }

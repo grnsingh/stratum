@@ -22,6 +22,8 @@ FetchContent_MakeAvailable(imgui)
 set(APP_SOURCES
     src/main.cpp
     src/glad.c
+    src/DataLoader.cpp
+    src/Window.cpp
 )
 
 set(IMGUI_SOURCES

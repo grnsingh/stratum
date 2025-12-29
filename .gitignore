@@ -1,6 +1,9 @@
 # Build/Cmake Assets
 build/* 
 
+# vscode
+.vscode/*
+
 # Prerequisites
 *.d
 
