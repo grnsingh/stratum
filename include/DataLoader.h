@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 #include <string>
 
@@ -7,5 +9,5 @@ struct Point {
 
 class DataLoader {
     public:
-    static std::vector<Point> loadTerrain(const std::string& filepath);
+    static void loadTerrain(const std::string& filepath, std::vector<Point>& pointCloud);
 };

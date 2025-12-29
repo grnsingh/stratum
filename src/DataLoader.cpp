@@ -3,13 +3,12 @@
 #include <iostream>
 #include <cstdio>
 
-std::vector<Point> DataLoader::loadTerrain(const std::string& filepath){
-    std::vector<Point> pointsCloud;
+void DataLoader::loadTerrain(const std::string& filepath, std::vector<Point>& pointsCloud){
 
     FILE* file = fopen(filepath.c_str(), "r");
     if(!file){
         std::cerr<<"[ERROR] Could not open file"<<std::endl;
-        return pointsCloud;
+        return;
     }
 
     // Reserveng atleast 1M ponits
@@ -26,6 +25,5 @@ std::vector<Point> DataLoader::loadTerrain(const std::string& filepath){
 
     fclose(file);
 
-    std::cout<<"[SUCCESS] Loaded "<< pointsCloud.size() <<"points"<<std::endl;
-    return pointsCloud; 
+    std::cout<<"[SUCCESS] Loaded "<< pointsCloud.size() <<" points"<<std::endl;
 }

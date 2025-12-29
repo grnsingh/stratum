@@ -24,6 +24,8 @@ set(APP_SOURCES
     src/glad.c
     src/DataLoader.cpp
     src/Window.cpp
+    src/Renderer.cpp
+    src/Shader.cpp
 )
 
 set(IMGUI_SOURCES
