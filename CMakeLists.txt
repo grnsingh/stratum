@@ -26,6 +26,7 @@ set(APP_SOURCES
     src/Window.cpp
     src/Renderer.cpp
     src/Shader.cpp
+    src/Camera.cpp
 )
 
 set(IMGUI_SOURCES

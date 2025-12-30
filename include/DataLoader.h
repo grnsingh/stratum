@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <string>
+#include <memory>
 
 struct Point {
     float x , y, z;
@@ -9,5 +10,5 @@ struct Point {
 
 class DataLoader {
     public:
-    static void loadTerrain(const std::string& filepath, std::vector<Point>& pointCloud);
+    static std::unique_ptr<std::vector<Point>> loadTerrain(const std::string& filepath);
 };
