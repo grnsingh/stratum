@@ -2,19 +2,25 @@
 
 #include <vector>
 #include <glad/glad.h>
+#include <glm/glm.hpp>
 #include "DataLoader.h"
 
+struct Chunk {
+    GLuint VAO, VBO;
+    int vertexCount;
+    glm::vec3 center;
+    
+    float minY, maxY; 
+};
+
 class Renderer {
-private:
-    GLuint m_VAO;
-    GLuint m_VBO;
-    unsigned long long m_VertexCount;
+    public:
+        Renderer();
+        ~Renderer();
 
-public:
-    Renderer();
-    ~Renderer(); 
+        void init(std::vector<Point>& points); 
+        void draw(const glm::vec3& cameraPos);
 
-    void init(const std::vector<Point>& points);
-
-    void draw();
+    private:
+        std::vector<Chunk> m_Chunks;
 };

@@ -3,7 +3,7 @@ import numpy as np
 
 INPUT_FILE = "assets/points.laz"
 OUTPUT_FILE = "assets/converted/terrain.txt"
-TARGET_POINTS = 1000000
+TARGET_POINTS = 10000000
 
 print(f"[1/4] Opening {INPUT_FILE}...")
 try:

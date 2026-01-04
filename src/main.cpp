@@ -63,7 +63,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 
 int main() {
 
-    Window appWindow(1280, 720, "Stratum [ImGui Integrated]");
+    Window appWindow(1280, 720, "Stratum");
     if (!appWindow.init()) return -1;
 
     GLFWwindow* nativeWin = appWindow.getNativeWindow();
@@ -189,7 +189,7 @@ int main() {
             terrainShader.setFloat("u_MinHeight", minHeightVal); 
             terrainShader.setFloat("u_MaxHeight", maxHeightVal);
 
-            renderer.draw();
+            renderer.draw(camera.GetPosition());
         }
 
         ImGui::Render();
