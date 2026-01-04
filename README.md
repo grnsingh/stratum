@@ -4,8 +4,7 @@ Stratum is a C++ rendering engine designed to visualize massive point cloud data
  
 The goal was simple: take raw coordinate data (x, y, z) and render it at 60 FPS without crashing the system, even with millions of points.
 
-https://github.com/user-attachments/assets/cbf77ef9-b1e9-4c90-8dd2-ae486ffd4480
-
+https://github.com/user-attachments/assets/44888e20-4a7b-4d14-bc1c-58fb82ce514a
 
 ## Key Features
 * **Real-time Rendering:** Handles 10,000,000+ points smoothly using Modern OpenGL (Core Profile).
