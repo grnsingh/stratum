@@ -79,15 +79,15 @@ int main() {
     ImGui_ImplGlfw_InitForOpenGL(nativeWin, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
-    Shader terrainShader("C:/Users/15878/Desktop/Projects/stratum/src/shaders/terrain.vert", 
-                         "C:/Users/15878/Desktop/Projects/stratum/src/shaders/terrain.frag");
+    Shader terrainShader("../src/shaders/terrain.vert", 
+                         "../src/shaders/terrain.frag");
     Renderer renderer;
 
     std::cout << "[MAIN] Launching worker thread..." << std::endl;
     std::future<std::unique_ptr<std::vector<Point>>> loadTask = std::async(
         std::launch::async, 
         DataLoader::loadTerrain, 
-        "C:/Users/15878/Desktop/Projects/stratum/assets/converted/terrain.txt"
+        "../../assets/converted/terrain.txt"
     );
 
     // App State Variables
